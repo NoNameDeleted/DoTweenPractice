@@ -10,7 +10,7 @@ public class Rotator : MonoBehaviour
     [SerializeField] private Vector3 _rotationTarget;
     [SerializeField] private float _duration;
 
-    void Start()
+    private void Start()
     {
         transform.DORotate(_rotationTarget, _duration).SetLoops(-1, _loopType).SetEase(_ease);
     }

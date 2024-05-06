@@ -19,7 +19,7 @@ public class TextChanger : MonoBehaviour
         _textMesh = GetComponent<Text>();
     }
 
-    void Start()
+    private void Start()
     {
         _textMesh.DOText(_massage, _duration).SetLoops(-1, _loopType).SetEase(_ease);
     }

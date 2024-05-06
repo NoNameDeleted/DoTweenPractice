@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using DG.Tweening;
 using UnityEngine;
 
+[RequireComponent(typeof(Renderer))]
 public class Colorizer : MonoBehaviour
 {
     [SerializeField] private LoopType _loopType;
@@ -18,7 +19,7 @@ public class Colorizer : MonoBehaviour
         _renderer = GetComponent<Renderer>();
     }
 
-    void Start()
+    private void Start()
     {
         _renderer.material.DOColor(_colorTarget, _duration).SetLoops(-1, _loopType).SetEase(_ease);
     }
